@@ -8,3 +8,6 @@ remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 plugins:
   - jekyll-remote-theme # Ensure this plugin is listed
   - jekyll-include-cache # Required by the theme
+
+header:
+image: /assets/assets/1000_F_259168326_2NMFj8bEzMZXaszKE5j1GFUlVaqwkZ8d.jpg

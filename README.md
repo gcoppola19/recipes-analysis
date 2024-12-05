@@ -1,3 +1,4 @@
+
 # Statistical Analysis on Recipes and Nutrition's role in Ratings
 This recipe analysis is a data science project, capturing the process of scraping data from a website and through steps of cleaning, and creating various models to answer our research question about our data. The primary focus of the project is to investigate the significance nutrition in the ratings of various recipes on food.com and furthermore if we can predict these ratings based on selected nutrition factors.
 
@@ -56,7 +57,7 @@ Then, we needed to make a threshold for what would be considered a "healthy" rec
 
 
 ### Univariate Analysis
-Embed at least one plotly plot you created in your notebook that displays the distribution of a single column (see Part 2: Report for instructions). Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present, and how they answer your initial question. (Your notebook will likely have more visualizations than your website, and that’s fine. Feel free to embed more than one univariate visualization in your website if you’d like, but make sure that each embedded plot is accompanied by a description.)
+ Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present, and how they answer your initial question. 
 
 ### Figure 1
 <iframe
@@ -66,7 +67,7 @@ Embed at least one plotly plot you created in your notebook that displays the di
   frameborder="0"
 ></iframe>
 
-Out of the recipe dataframe, our figures represent a small random sample of the data. This figur shows the distribution of sugar percent daily value amongst ratings. There isn't a significant trend in the data, however, it is noticeable that the recipes with higher ratings tend to have more sugar percent value in them, which informs us that less healthy recipes may have higher ratings.
+Out of the recipe dataframe, our figures represent a small random sample of the data. This figure shows the distribution of sugar percent daily value amongst ratings. There isn't a significant trend in the data, however, it is noticeable that the recipes with higher ratings tend to have more sugar percent value in them, which informs us that less healthy recipes may have higher ratings.
 
 <iframe
   src="assets/figure2.html"
@@ -74,6 +75,8 @@ Out of the recipe dataframe, our figures represent a small random sample of the 
   height="600"
   frameborder="0"
 ></iframe>
+
+This figure shows the distribution of saturated fat percent daily value amongst ratings. In this figure, there's even less of a trend in the data, but the recipes with higher ratings tend to have more saturated fat percent value in them, which further solidifies that less healthy recipes may have higher ratings.
 
 ### Bivariate Analysis
 Embed at least one plotly plot that displays the relationship between two columns. Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present and how they answer your initial question. (Your notebook will likely have more visualizations than your website, and that’s fine. Feel free to embed more than one bivariate visualization in your website if you’d like, but make sure that each embedded plot is accompanied by a description.)
