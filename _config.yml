@@ -5,7 +5,7 @@
 
 title: "Recipes"
 description: "By lena and Grace"
-theme: "just-the-docs"
+
 
 plugins:
   - jekyll-remote-theme
