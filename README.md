@@ -84,9 +84,13 @@ Embed at least one plotly plot that displays the relationship between two column
 ### Interesting Aggregates
 Embed at least one grouped table or pivot table in your website and explain its significance.
 
+When splitting up our data into healthy vs unhealthy recipes, we found that there were significantly more unhealthy recipes based on our criteria of healthy. 176,135 recipes were unhealthy while 58,293 were considered healthy
+Embed at least one grouped table or pivot table in your website and explain its significance.
+
 ### Imputation
 If you imputed any missing values, visualize the distributions of the imputed columns before and after imputation. Describe which imputation technique you chose to use and why. If you didn’t fill in any missing values, discuss why not.
 
+The values we imputed were all related to text involving descriptions or reviews, so we filled them in with an empty string as it didn't have an affect on the data we were looking at and done for completeness. All nutrition information was provided which was what we were mainly looking at. In terms of ratings, we filled in any column that had a rating of 0, meaning it didn't recieve a rating as NaN because we didn't want it to affect our average rating number.
 ---
 ## Framing a Prediction Problem
 
