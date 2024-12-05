@@ -3,11 +3,14 @@
 # plugins:
 # - jekyll-remote-theme # add this line to the plugins list if you already have one
 
-remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+title: "Recipes"
+description: "By lena and Grace"
+theme: "just-the-docs"
 
 plugins:
-  - jekyll-remote-theme # Ensure this plugin is listed
-  - jekyll-include-cache # Required by the theme
+  - jekyll-remote-theme
+
+remote_theme: "pmarsceill/just-the-docs"
 
 header:
 image: /assets/assets/1000_F_259168326_2NMFj8bEzMZXaszKE5j1GFUlVaqwkZ8d.jpg

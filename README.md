@@ -67,7 +67,7 @@ Then, we needed to make a threshold for what would be considered a "healthy" rec
   frameborder="0"
 ></iframe>
 
-Out of the recipe dataframe, our figures represent a small random sample of the data. This figure shows the distribution of sugar percent daily value amongst ratings. There isn't a significant trend in the data, however, it is noticeable that the recipes with higher ratings tend to have more sugar percent value in them, which informs us that less healthy recipes may have higher ratings.
+Out of the recipe dataframe, our figures represent a small random sample of the data. This plot shows the distribution of sugar percent daily value amongst ratings. There isn't a significant trend in the data, however, it is noticeable that the recipes with higher ratings tend to have more sugar percent value in them, which informs us that less healthy recipes may have higher ratings.
 
 <iframe
   src="assets/figure2.html"
