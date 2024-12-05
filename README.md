@@ -19,16 +19,16 @@ name: Name of the recipe
 id: unqiue identifier given to each recipe
 nutrition: Nutritional information (list of seven float values)
 Includes calories, fat, sugar, protein, saturated fat, sodium, and fiber.
-avg_rating: Average rating for the recipe (float)
-Reflects the cumulative user feedback, ranging from 0 to 5 stars.
-satfat_pdv: Saturated fat as a percentage of the daily value (float)
-Derived from the nutrition column, indicating healthiness concerning saturated fat.
-sugar_pdv: Sugar as a percentage of the daily value (float)
-Derived from the nutrition column, indicating healthiness concerning sugar.
-healthy: Indicator of recipe healthiness (integer, 1 or 0)
-1 if both satfat_pdv and sugar_pdv are below 5%, 0 otherwise.
 rating: Individual user ratings 
 Rating provided by a user for a recipe, ranging from 0 to 5.
+avg_rating: Average rating for the recipe 
+Reflects the cumulative user feedback, ranging from 0 to 5 stars.
+satfat_pdv: Saturated fat as a percentage of the daily value 
+Derived from the nutrition column, indicating healthiness concerning saturated fat.
+sugar_pdv: Sugar as a percentage of the daily value 
+Derived from the nutrition column, indicating healthiness concerning sugar.
+healthy: Indicator of recipe healthiness 
+1 if both satfat_pdv and sugar_pdv are below 5%, 0 otherwise.
 
 By exploring these columns, we aim to determine the relationship between recipe healthiness and user ratings, offering insights into consumer behavior and preferences.
 
@@ -46,17 +46,34 @@ Next, we obtained our sugar and saturated fat percent daily value columns. We st
 
 Then, we needed to make a threshold for what would be considered a "healthy" recipe. Using our data, we chose 20% to be the threshold and created a column which would categorize a recipe as healthy or not healthy.  
 
-<iframe
+<!-- <iframe
   src="assets/recipeshead.html"
   width="800"
   height="600"
   frameborder="0"
-></iframe>
+></iframe> -->
 
 
 
 ### Univariate Analysis
 Embed at least one plotly plot you created in your notebook that displays the distribution of a single column (see Part 2: Report for instructions). Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present, and how they answer your initial question. (Your notebook will likely have more visualizations than your website, and that’s fine. Feel free to embed more than one univariate visualization in your website if you’d like, but make sure that each embedded plot is accompanied by a description.)
+
+### Figure 1
+<iframe
+  src="assets/figure1.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+Out of the recipe dataframe, our figures represent a small random sample of the data. This figur shows the distribution of sugar percent daily value amongst ratings. There isn't a significant trend in the data, however, it is noticeable that the recipes with higher ratings tend to have more sugar percent value in them, which informs us that less healthy recipes may have higher ratings.
+
+<iframe
+  src="assets/figure2.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 ### Bivariate Analysis
 Embed at least one plotly plot that displays the relationship between two columns. Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present and how they answer your initial question. (Your notebook will likely have more visualizations than your website, and that’s fine. Feel free to embed more than one bivariate visualization in your website if you’d like, but make sure that each embedded plot is accompanied by a description.)
@@ -76,19 +93,7 @@ If you imputed any missing values, visualize the distributions of the imputed co
 ---
 ## Final Model
 
-<iframe
-  src="assets/figure1.html"
-  width="800"
-  height="600"
-  frameborder="0"
-></iframe>
 
-<iframe
-  src="assets/figure2.html"
-  width="800"
-  height="600"
-  frameborder="0"
-></iframe>
 
 <iframe
   src="assets/figure3.html"
