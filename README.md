@@ -103,11 +103,25 @@ Embed at least one grouped table or pivot table in your website and explain its 
 
 ### Imputation
 
-##TO FIX TO FIX
-
 If you imputed any missing values, visualize the distributions of the imputed columns before and after imputation. Describe which imputation technique you chose to use and why. If you didn’t fill in any missing values, discuss why not.
 
-The values we imputed were all related to text involving descriptions or reviews, so we filled them in with an empty string as it didn't have an affect on the data we were looking at and done for completeness. All nutrition information was provided which was what we were mainly looking at. In terms of ratings, we filled in any column that had a rating of 0, meaning it didn't recieve a rating as NaN because we didn't want it to affect our average rating number.
+The one column of missing values that we imputed was the rating column for each recipe. Some recipes had a rating of 0, which we changed to a missing value, because 0 implies a rating was not given and we didn't want the 0 value to scew the average rating. From this we found all the ratings of that recipe got the mean of them and assigned each missing value of that recipe with the mean. We chose mean imputation because filling them in with 0 wouldn't make sense and we felt the mean was most representative of a rating of a recipe. In figure 4 and 5 below, the distributions are provided of ratings before dropping the 0 ratings and after.
+
+### Figure 4 Unimputed Ratings
+<iframe
+  src="assets/notdroppedcount.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+### Figure 5 Imputed Ratings
+<iframe
+  src="assets/droppedcount.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 ---
 ## Framing a Prediction Problem
