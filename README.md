@@ -125,9 +125,23 @@ The one column of missing values that we imputed was the rating column for each 
 
 ---
 ## Framing a Prediction Problem
-Clearly state your prediction problem and type (classification or regression). If you are building a classifier, make sure to state whether you are performing binary classification or multiclass classification. Report the response variable (i.e. the variable you are predicting) and why you chose it, the metric you are using to evaluate your model and why you chose it over other suitable metrics (e.g. accuracy vs. F1-score). Make sure to justify what information you would know at the “time of prediction” and to only train your model using those features. For instance, if we wanted to predict your Final Exam grade, we couldn’t use your Portfolio Homework grade, because we (probably) won’t have the Portfolio Homework graded before the Final Exam! Feel free to ask questions if you’re not sure.
+Clearly state your prediction problem and type (classification or regression). Report the response variable (i.e. the variable you are predicting) and why you chose it, the metric you are using to evaluate your model and why you chose it over other suitable metrics (e.g. accuracy vs. F1-score). Make sure to justify what information you would know at the “time of prediction” and to only train your model using those features. For instance, if we wanted to predict your Final Exam grade, we couldn’t use your Portfolio Homework grade, because we (probably) won’t have the Portfolio Homework graded before the Final Exam! Feel free to ask questions if you’re not sure. 
 
-We are looking to predict the rating of recipes from the percent daily values of saturated fat and sugar in the recipe. If we are given the nutrition information, can we predict an accurate rating? This prediction problem will be answered through a linear regression model, with the response variable being a recipe's rating
+###  Prediction Problem
+We are looking to predict the rating of recipes based on their nutrition, more specifically, the percent daily values of saturated fat and sugar. If we are given the nutritional information (PDV of saturated fat and sugar), can we accurately predict a user rating of a recipe? This prediction problem will be answered through a linear regression model, as the response variable is the recipe's rating which is a continuous numerical variable.
+
+### Response Variable:
+The response variable is the rating of a recipe. Food.com gathers customer's ratings for a recipe which is representative of if consumers liked a recipe; we found this to be a critical indicator of a recipe's success and can provide insights into how nutrition affects both consumer's preferences and ratings.
+
+### Predictor Variables:
+The predictor variables we chose are percent daily value of saturated fat and percent daily value of sugar. These features are quantifiable and can tell us how healthy or unhealthy a recipe is which could influence the rating of a recipe. At the time of prediction, we know the nutritional information of a recipe e.g., percent daily values of saturated fat and sugar. These values are known before the recipe is rated, because they are based on the recipe's ingredients.
+
+### Metric to Evaluate our Model
+
+##TO FIX 
+
+We will use the Mean Squared Error (MSE) as the primary evaluation We chose MSE over other metrics because MSE provides a direct measure of prediction error by averaging the squared differences between predicted and actual values, making it straightforward to interpret in the context of ratings. Furthermore, squaring the residuals ensures that larger prediction errors have a disproportionately higher impact on the metric, which is crucial for maintaining prediction quality. MSE is one of the most commonly used metrics for regression tasks and aligns well with the linear regression model we are using.
+
 ---
 ## Baseline Model
 
