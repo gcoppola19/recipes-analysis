@@ -14,3 +14,20 @@ remote_theme: "pmarsceill/just-the-docs"
 
 header:
 image: /assets/assets/1000_F_259168326_2NMFj8bEzMZXaszKE5j1GFUlVaqwkZ8d.jpg
+
+just_the_docs:
+  navigation:
+    - title: "Introduction"
+      url: "/introduction/"
+    - title: "Data Cleaning and Exploratory Data Analysis"
+      url: "/cleaning/"
+    - title: "Framing a Prediction Problem"
+      url: "/framing/"
+    - title: "Baseline Model"
+      url: "/baseline/"
+    - title: "Final Model"
+      url: "/final/"
+
+      
+
+      
