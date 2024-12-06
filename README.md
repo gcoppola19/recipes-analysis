@@ -48,13 +48,13 @@ Next, we obtained our sugar and saturated fat percent daily value columns. We st
 
 Then, we needed to make a threshold for what would be considered a "healthy" recipe. Using our data, we chose 20% to be the threshold and created a column which would categorize a recipe as healthy or not healthy.  
 
-<iframe
+<!-- <iframe
   src="assets/table.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
-
+ -->
 
 | name                                 | nutrition                                    |   recipe_id |          user_id |   rating |   avg_rating |   satfat_pdv |   sugar_pdv |   healthy |
 |:-------------------------------------|:---------------------------------------------|------------:|-----------------:|---------:|-------------:|-------------:|------------:|----------:|
