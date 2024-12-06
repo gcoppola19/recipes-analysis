@@ -15,7 +15,7 @@ This recipe analysis is a data science project, capturing the process of scrapin
  
 Here's a detailed breakdown of our columns in our dataset:
 
-### Relevant Columns:
+**Relevant Columns:**
 - name: Name of the recipe 
 - id: unqiue identifier given to each recipe
 - nutrition: Nutritional information (list of seven float values)
@@ -60,7 +60,7 @@ Then, we needed to make a threshold for what would be considered a "healthy" rec
 ### Univariate Analysis
  Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present, and how they answer your initial question.
 
- ### Figure 1 
+ **Figure 1** 
 <iframe
   src="assets/figure3.html"
   width="800"
@@ -74,7 +74,7 @@ We wanted to explore the distribution amongst recipes of ratings, and then split
 ### Bivariate Analysis
 Embed at least one plotly plot that displays the relationship between two columns. Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present and how they answer your initial question.
 
-### Figure 2
+**Figure 2**
 <iframe
   src="assets/figure1.html"
   width="800"
@@ -84,7 +84,7 @@ Embed at least one plotly plot that displays the relationship between two column
 
 Out of the recipe dataframe, our figures represent a small random sample of the data. This plot shows the distribution of sugar percent daily value amongst ratings. There isn't a significant trend in the data, however, it is noticeable that the recipes with higher ratings tend to have more sugar percent value in them, which informs us that less healthy recipes may have higher ratings.
 
-### Figure 3
+**Figure 3**
 <iframe
   src="assets/figure2.html"
   width="800"
@@ -107,7 +107,7 @@ If you imputed any missing values, visualize the distributions of the imputed co
 
 The one column of missing values that we imputed was the rating column for each recipe. Some recipes had a rating of 0, which we changed to a missing value, because 0 implies a rating was not given and we didn't want the 0 value to scew the average rating. From this we found all the ratings of that recipe got the mean of them and assigned each missing value of that recipe with the mean. We chose mean imputation because filling them in with 0 wouldn't make sense and we felt the mean was most representative of a rating of a recipe. In figure 4 and 5 below, the distributions are provided of ratings before dropping the 0 ratings and after.
 
-### Figure 4 Unimputed Ratings
+**Figure 4 Unimputed Ratings**
 <iframe
   src="assets/notdroppedcount.html"
   width="800"
@@ -115,7 +115,7 @@ The one column of missing values that we imputed was the rating column for each 
   frameborder="0"
 ></iframe>
 
-### Figure 5 Imputed Ratings
+**Figure 5 Imputed Ratings**
 <iframe
   src="assets/droppedcount.html"
   width="800"
