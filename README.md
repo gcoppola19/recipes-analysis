@@ -147,7 +147,18 @@ We will use the Mean Squared Error (MSE) as the primary evaluation We chose MSE 
 
 Describe your model and state the features in your model, including how many are quantitative, ordinal, and nominal, and how you performed any necessary encodings. Report the performance of your model and whether or not you believe your current model is “good” and why.
 
-Tip: Make sure to hit all of the points above: many Portfolio Homeworks in the past have lost points for not doing so.
+**Model**
+We used a linear regression model which predicts a recipe's average rating based on the percent daily values of saturated fat and sugar. We chose linear regression because it's easy to interpret and gives us a straightforward relationship between predictors and the response variable.
+
+**Features in the Model**
+Saturated Fat PDV (satfat_pdv): Quantitative feature representing the percent daily value of saturated fat in the recipe.
+Sugar PDV (sugar_pdv): Quantitative feature representing the percent daily value of sugar in the recipe.
+So, total number of quantitative features is 2. There are no ordinal or nominal features and no encoding was necessary for this model and features.
+
+
+**Performance**
+##TO FIX
+The baseline model achieved a Root Mean Squared Error (RMSE) of 0.9118. RMSE measures the average magnitude of error between predicted and actual ratings, and lower values indicate better model performance. The baseline model's RMSE of 0.9118 suggests that the predictions are approximately ±0.91 ratings away from the actual ratings on average. This model is "good" because  it's straightforward and interpretable. Also, the RMSE is fairly low based on our 2 features. However, user ratings are influenced by numerous other factors like taste, and personal preferences, which makes it more difficult to predict a rating.
 
 ---
 ## Final Model
