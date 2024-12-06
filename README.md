@@ -15,20 +15,20 @@ This recipe analysis is a data science project, capturing the process of scrapin
  
 Here's a detailed breakdown of our columns in our dataset:
 
-Relevant Columns:
-name: Name of the recipe 
-id: unqiue identifier given to each recipe
-nutrition: Nutritional information (list of seven float values)
+### Relevant Columns:
+- name: Name of the recipe 
+- id: unqiue identifier given to each recipe
+- nutrition: Nutritional information (list of seven float values)
 Includes calories, fat, sugar, protein, saturated fat, sodium, and fiber.
-rating: Individual user ratings 
+- rating: Individual user ratings 
 Rating provided by a user for a recipe, ranging from 0 to 5.
-avg_rating: Average rating for the recipe 
+- avg_rating: Average rating for the recipe 
 Reflects the cumulative user feedback, ranging from 0 to 5 stars.
-satfat_pdv: Saturated fat as a percentage of the daily value 
+- satfat_pdv: Saturated fat as a percentage of the daily value 
 Derived from the nutrition column, indicating healthiness concerning saturated fat.
-sugar_pdv: Sugar as a percentage of the daily value 
+- sugar_pdv: Sugar as a percentage of the daily value 
 Derived from the nutrition column, indicating healthiness concerning sugar.
-healthy: Indicator of recipe healthiness 
+- healthy: Indicator of recipe healthiness 
 1 if both satfat_pdv and sugar_pdv are below 5%, 0 otherwise.
 
 By exploring these columns, we aim to determine the relationship between recipe healthiness and user ratings, offering insights into consumer behavior and preferences.
@@ -47,17 +47,19 @@ Next, we obtained our sugar and saturated fat percent daily value columns. We st
 
 Then, we needed to make a threshold for what would be considered a "healthy" recipe. Using our data, we chose 20% to be the threshold and created a column which would categorize a recipe as healthy or not healthy.  
 
-<!-- <iframe
+<iframe
   src="assets/table.html"
   width="800"
   height="600"
   frameborder="0"
-></iframe> -->
+></iframe>
 
 
 
 ### Univariate Analysis
- Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present, and how they answer your initial question. 
+ Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present, and how they answer your initial question.
+
+ ### Figure 1 
 <iframe
   src="assets/figure3.html"
   width="800"
@@ -65,11 +67,13 @@ Then, we needed to make a threshold for what would be considered a "healthy" rec
   frameborder="0"
 ></iframe>
 
+We wanted to explore the distribution amongst recipes of ratings, and then splitting it into the categories of healthy versus unhealthy ratings. When we created our threshold, there were significantly more unhealthy recipes, so when looking at figure 3, there's significantly more ratings of 5, however, the unhealthy recipes with a rating of 5, of all unhealthy recipes its 74% where healthy recipes with a rating of 5 of all healthy recipes is 75%. So, although the plot depicts more ratings of 5 to unhealthy as opposed to healthy, there's a larger group of unhealthy than healthy, and because the plot is a count of all recipes, it doesn't properly reflect the ratio. The plot is right scewed with less values receiving lower ratings, and most recipes receiving 4 or 5 ratings. 
+
 
 ### Bivariate Analysis
 Embed at least one plotly plot that displays the relationship between two columns. Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present and how they answer your initial question.
 
-### Figure 1
+### Figure 2
 <iframe
   src="assets/figure1.html"
   width="800"
@@ -79,6 +83,7 @@ Embed at least one plotly plot that displays the relationship between two column
 
 Out of the recipe dataframe, our figures represent a small random sample of the data. This plot shows the distribution of sugar percent daily value amongst ratings. There isn't a significant trend in the data, however, it is noticeable that the recipes with higher ratings tend to have more sugar percent value in them, which informs us that less healthy recipes may have higher ratings.
 
+### Figure 3
 <iframe
   src="assets/figure2.html"
   width="800"
@@ -102,6 +107,7 @@ Embed at least one grouped table or pivot table in your website and explain its 
 If you imputed any missing values, visualize the distributions of the imputed columns before and after imputation. Describe which imputation technique you chose to use and why. If you didn’t fill in any missing values, discuss why not.
 
 The values we imputed were all related to text involving descriptions or reviews, so we filled them in with an empty string as it didn't have an affect on the data we were looking at and done for completeness. All nutrition information was provided which was what we were mainly looking at. In terms of ratings, we filled in any column that had a rating of 0, meaning it didn't recieve a rating as NaN because we didn't want it to affect our average rating number.
+
 ---
 ## Framing a Prediction Problem
 Clearly state your prediction problem and type (classification or regression). If you are building a classifier, make sure to state whether you are performing binary classification or multiclass classification. Report the response variable (i.e. the variable you are predicting) and why you chose it, the metric you are using to evaluate your model and why you chose it over other suitable metrics (e.g. accuracy vs. F1-score). Make sure to justify what information you would know at the “time of prediction” and to only train your model using those features. For instance, if we wanted to predict your Final Exam grade, we couldn’t use your Portfolio Homework grade, because we (probably) won’t have the Portfolio Homework graded before the Final Exam! Feel free to ask questions if you’re not sure.
