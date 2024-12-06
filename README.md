@@ -56,6 +56,14 @@ Then, we needed to make a threshold for what would be considered a "healthy" rec
 ></iframe>
 
 
+| name                                 | nutrition                                    |   recipe_id |          user_id |   rating |   avg_rating |   satfat_pdv |   sugar_pdv |   healthy |
+|:-------------------------------------|:---------------------------------------------|------------:|-----------------:|---------:|-------------:|-------------:|------------:|----------:|
+| 1 brownies in the world    best ever | [138.4, 10.0, 50.0, 3.0, 3.0, 19.0, 6.0]     |      333281 | 386585           |        4 |            4 |           19 |          50 |         0 |
+| 1 in canada chocolate chip cookies   | [595.1, 46.0, 211.0, 22.0, 13.0, 51.0, 26.0] |      453467 | 424680           |        5 |            5 |           51 |         211 |         0 |
+| 412 broccoli casserole               | [194.8, 20.0, 6.0, 32.0, 22.0, 36.0, 3.0]    |      306168 |  29782           |        5 |            5 |           36 |           6 |         0 |
+| 412 broccoli casserole               | [194.8, 20.0, 6.0, 32.0, 22.0, 36.0, 3.0]    |      306168 |      1.19628e+06 |        5 |            5 |           36 |           6 |         0 |
+| 412 broccoli casserole               | [194.8, 20.0, 6.0, 32.0, 22.0, 36.0, 3.0]    |      306168 | 768828           |        5 |            5 |           36 |           6 |         0 |
+
 
 ### Univariate Analysis
  Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present, and how they answer your initial question.
