@@ -1,6 +1,10 @@
 
-# Statistical Analysis on Recipes and Nutrition's role in Ratings
+# The Flavor of Ratings: Exploring Nutrition's Role in Recipe Popularity 
+## A Statistical Analysis on Recipes and Nutrition's role in their Ratings
 This recipe analysis is a data science project, capturing the process of scraping data from a website and through steps of cleaning, and creating various models to answer our research question about our data. The primary focus of the project is to investigate the significance nutrition in the ratings of various recipes on food.com and furthermore if we can predict these ratings based on selected nutrition factors.
+
+*Lena Bibbo lbibbo@umich.edu*
+*Grace Coppola gcoppola@umich.edu*
 
 ---
 ## Introduction
@@ -66,7 +70,6 @@ Then, we needed to make a threshold for what would be considered a "healthy" rec
 
 
 ### Univariate Analysis
- Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present, and how they answer your initial question.
 
  **Figure 1** 
 <iframe
@@ -80,7 +83,6 @@ We wanted to explore the distribution amongst recipes of ratings, and then split
 
 
 ### Bivariate Analysis
-Embed at least one plotly plot that displays the relationship between two columns. Include a 1-2 sentence explanation about your plot, making sure to describe and interpret any trends present and how they answer your initial question.
 
 **Figure 2**
 <iframe
@@ -103,15 +105,47 @@ Out of the recipe dataframe, our figures represent a small random sample of the 
 This figure shows the distribution of saturated fat percent daily value amongst ratings. In this figure, there's even less of a trend in the data, but the recipes with higher ratings tend to have more saturated fat percent value in them, which further solidifies that less healthy recipes may have higher ratings.
 
 ### Interesting Aggregates
-##TO DO
-Embed at least one grouped table or pivot table in your website and explain its significance.
 
-When splitting up our data into healthy vs unhealthy recipes, we found that there were significantly more unhealthy recipes based on our criteria of healthy. 176,135 recipes were unhealthy while 58,293 were considered healthy
-Embed at least one grouped table or pivot table in your website and explain its significance.
+|        0 |         1 |
+|---------:|----------:|
+| 228.265  |   2.59259 |
+|  56.1457 |   4.3608  |
+|  36.979  |   4.43829 |
+|  39.5146 |   5.20784 |
+|  42.5835 |   6.61811 |
+|  45.4073 |   6.62149 |
+|  51.4483 |   7.59997 |
+|  47.0016 |   7.62087 |
+|  47.6179 |   7.88285 |
+|  49.7732 |   8.3947  |
+|  53.4266 |   8.76937 |
+|  51.4027 |   8.23605 |
+|  51.8215 |   8.77842 |
+|  57.8498 |   8.73361 |
+|  58.0093 |   8.40221 |
+|  66.5506 |   9.15412 |
+|  60.4654 |   8.39573 |
+|  67.7247 |   9.90625 |
+|  57.6874 |   7.95604 |
+|  63.9245 |  10.964   |
+|  80.3327 |   6.36207 |
+|  85.7745 |  15.45    |
+|  70.7578 |  10.9362  |
+|  53.1742 |  12.6316  |
+|  85.1373 |   5.66667 |
+|  77.5934 |  15.125   |
+| 126.356  | nan       |
+|  51.6053 |  12       |
+|  44.7097 | nan       |
+|  69.7812 | nan       |
+|  58.2308 | nan       |
+| 100.75   | nan       |
+| nan      |  12       |
+| 802      | nan       |
+
+This pivot table displays the average saturated fat percent daily value for recipes categorized by their number of ingredients and whether they are healthy or not. Healthy recipes consistently have lower saturated fat values compared to unhealthy ones, indicating a clear distinction in fat content based on health categorization. The table also shows that saturated fat varies with ingredient count. It can be used to evaluate the correlation between ingredient count and the health of recipes (by examining saturated fat levels).
 
 ### Imputation
-
-If you imputed any missing values, visualize the distributions of the imputed columns before and after imputation. Describe which imputation technique you chose to use and why. If you didn’t fill in any missing values, discuss why not.
 
 The one column of missing values that we imputed was the rating column for each recipe. Some recipes had a rating of 0, which we changed to a missing value, because 0 implies a rating was not given and we didn't want the 0 value to scew the average rating. From this we found all the ratings of that recipe got the mean of them and assigned each missing value of that recipe with the mean. We chose mean imputation because filling them in with 0 wouldn't make sense and we felt the mean was most representative of a rating of a recipe. In figure 4 and 5 below, the distributions are provided of ratings before dropping the 0 ratings and after.
 
@@ -133,7 +167,6 @@ The one column of missing values that we imputed was the rating column for each 
 
 ---
 ## Framing a Prediction Problem
-Clearly state your prediction problem and type (classification or regression). Report the response variable (i.e. the variable you are predicting) and why you chose it, the metric you are using to evaluate your model and why you chose it over other suitable metrics (e.g. accuracy vs. F1-score). Make sure to justify what information you would know at the “time of prediction” and to only train your model using those features. For instance, if we wanted to predict your Final Exam grade, we couldn’t use your Portfolio Homework grade, because we (probably) won’t have the Portfolio Homework graded before the Final Exam! Feel free to ask questions if you’re not sure. 
 
 ###  Prediction Problem
 We are looking to predict the rating of recipes based on their nutrition, more specifically, the percent daily values of saturated fat and sugar. If we are given the nutritional information (PDV of saturated fat and sugar), can we accurately predict a user rating of a recipe? This prediction problem will be answered through a linear regression model, as the response variable is the recipe's rating which is a continuous numerical variable.
@@ -146,9 +179,8 @@ The predictor variables we chose are percent daily value of saturated fat and pe
 
 ### Metric to Evaluate our Model
 
-##TO FIX 
 
-We will use the Mean Squared Error (MSE) as the primary evaluation We chose MSE over other metrics because MSE provides a direct measure of prediction error by averaging the squared differences between predicted and actual values, making it straightforward to interpret in the context of ratings. Furthermore, squaring the residuals ensures that larger prediction errors have a disproportionately higher impact on the metric, which is crucial for maintaining prediction quality. MSE is one of the most commonly used metrics for regression tasks and aligns well with the linear regression model we are using.
+We will use the Root Mean Squared Error (RMSE) as the primary evaluation. We chose RMSE over other metrics because MSE provides a direct measure of prediction error making it straightforward to interpret in the context of ratings. Furthermore, squaring the residuals ensures that larger prediction errors have a disproportionately higher impact on the metric, which is crucial for maintaining prediction quality. MSE is one of the most commonly used metrics for regression tasks and aligns well with the linear regression model we are using.
 
 ---
 ## Baseline Model
@@ -165,14 +197,18 @@ So, total number of quantitative features is 2. There are no ordinal or nominal 
 
 
 **Performance**
-##TO FIX
-The baseline model achieved a Root Mean Squared Error (RMSE) of 0.9118. RMSE measures the average magnitude of error between predicted and actual ratings, and lower values indicate better model performance. The baseline model's RMSE of 0.9118 suggests that the predictions are approximately ±0.91 ratings away from the actual ratings on average. This model is "good" because  it's straightforward and interpretable. Also, the RMSE is fairly low based on our 2 features. However, user ratings are influenced by numerous other factors like taste, and personal preferences, which makes it more difficult to predict a rating.
+ RMSE measures the average magnitude of error between predicted and actual ratings, and lower values indicate better model performance. The model achieved a RMSE (Root Mean Squared Error) of 0.5564. The model is predicting the average rating of recipes which is 1-5 and it is off by 0.5564 points which we think is fairly good for a starting point, but not great. There is definitely room for improvement with more features and the use of more sophisticated models.
 
 ---
 ## Final Model
 
-State the features you added and why they are good for the data and prediction task. Note that you can’t simply state “these features improved my accuracy”, since you’d need to choose these features and fit a model before noticing that – instead, talk about why you believe these features improved your model’s performance from the perspective of the data generating process.
+For the final model, we began by testing a Ridge Regression and then tried Lasso Regression. We used StandardScaler to scale the sugar and saturated fat pdv columns so that larger values do not dominate the penalty placed by Ridge and Lasso Regression. We know from analysis that the sugar_pdv and satfat_pdv have extreme outlier values so it makes sense to rescale the columns to have a mean of 0 and a standard deviation of 1. Reducing the impact of extreme values will help the model focus more on the general trend in the data and lead to more reliable predictions. We also transformed both columns again using Quantile Transformer to handle any skewness and map them to normal distributions. From our analysis, we could see that the sugar_pdv and satfat_pdv were skewed.  By transforming the features to follow a normal distribution, we can improve model performance by making the data more aligned with the assumptions of our linear models. Lastly, we used Polynomial Features to handle the case of non-linear relationships in my data. By creating interaction terms and higher-degree features, we allow the model to capture more complex relationships between satfat_pdv and sugar_pdv and their impact on the target variable.
 
-Describe the modeling algorithm you chose, the hyperparameters that ended up performing the best, and the method you used to select hyperparameters and your overall model. Describe how your Final Model’s performance is an improvement over your Baseline Model’s performance
+
+
+The final modeling algorithm we chose was Lasso Regression because it performed slightly better than the Ridge Regression model and the original Linear Regression model. The hyperparameters that ended up performing the best were {'lasso__alpha': 0.001, 'preprocessor__pipeline__polynomial__degree': 3, 'preprocessor__pipeline__quantile_transformer__n_quantiles': 20}.  I chose the hyperparameter n_quantiles to test the results of coarser binning (5 and 10) compared to more granular mapping (20). I also chose the hyperparameter degree of PolynomialFeatures to introduce both quadratic and cubic terms to test basic and complex relationships. Lastly, I used the alpha parameter to control how coefficients are penalized. The range of values I chose reflects minimal, moderate, and strong regularization. 
+
+
+The RMSE of the final model is 0.5559 which is slightly less than the baseline model’s RMSE of 0.5564. It represents a small but measurable enhancement in model performance. This change indicates that the final model is better at minimizing prediction errors than the baseline model.
 
 ---
