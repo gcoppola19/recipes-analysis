@@ -106,6 +106,12 @@ This figure shows the distribution of saturated fat percent daily value amongst 
 
 ### Interesting Aggregates
 
+**Pivot Table**
+
+0 represents unhealthy recipes and 1 represents healthy recipes
+The index is the number of ingredients ina  recipe, starting with 1 to 37 ingredients.
+
+
 |        0 |         1 |
 |---------:|----------:|
 | 228.265  |   2.59259 |
